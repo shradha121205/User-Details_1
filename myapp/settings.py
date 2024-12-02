@@ -27,7 +27,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myapp.settings')
 SECRET_KEY = 'django-insecure-3dztw1#$jg0-2opq=(2p&=623m$^2y-z#=j4)ut59s06@8-a2n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
