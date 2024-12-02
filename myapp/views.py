@@ -4,7 +4,7 @@ from django.core.paginator import Paginator
 from django.db.models import Q
 
 def index(request):
-    return render(request,'index.html')
+    return render(request,'myapp/index.html')
 
 def employee_list(request):
     query = request.GET.get('query', '')
