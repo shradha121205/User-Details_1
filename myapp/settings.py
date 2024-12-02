@@ -84,12 +84,8 @@ WSGI_APPLICATION = 'myapp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'orion_intern',
-        'USER': 'orion_intern',
-        'PASSWORD':'Orion@2024',
-        'HOST':'eu-central-1-clientpoc02.internal.orionic.com',
-        'PORT':'5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
