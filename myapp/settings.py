@@ -15,8 +15,8 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-PROJECT_DIR = os.path.abspath(os.path.dirname(
-    os.path.dirname(os.path.abspath(__file__))))
+# PROJECT_DIR = os.path.abspath(os.path.dirname(
+#     os.path.dirname(os.path.abspath(__file__))))
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myapp.settings')
 
@@ -27,9 +27,9 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myapp.settings')
 SECRET_KEY = 'django-insecure-3dztw1#$jg0-2opq=(2p&=623m$^2y-z#=j4)ut59s06@8-a2n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['user-detail-c90o.onrender.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['*']
 
 
 
@@ -62,7 +62,7 @@ ROOT_URLCONF = 'myapp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(PROJECT_DIR,'templates/myapp')],
+        'DIRS': [os.path.join(BASE_DIR,'myapp','templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
