@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background: #1f1f1f;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 500px;
+        }
+
+        .form-container h1 {
+            margin-bottom: 20px;
+        }
+
+        .form-container input, .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .form-container button {
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Add User</h1>
+        <form method="POST">
+            {% csrf_token %}
+            
+            <!-- Hidden field for user_id -->
+            <input type="hidden" name="user_id" value="{{ user_id }}">
+
+            <!-- Other form fields -->
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="text" name="nationality" placeholder="Nationality" required>
+            <input type="text" name="city" placeholder="City" required>
+            <input type="number" step="any" name="latitude" placeholder="Latitude">
+            <input type="number" step="any" name="longitude" placeholder="Longitude">
+            <input type="text" name="gender" placeholder="Gender" required>
+            <input type="text" name="ethnic_group" placeholder="Ethnic Group">
+            <input type="number" name="age" placeholder="Age" required>
+            <input type="number" step="any" name="english_grade" placeholder="English Grade">
+            <input type="number" step="any" name="math_grade" placeholder="Math Grade">
+            <input type="number" step="any" name="science_grade" placeholder="Science Grade">
+            <input type="number" step="any" name="language_grade" placeholder="Language Grade">
+            <input type="number" name="portfolio_rating" placeholder="Portfolio Rating">
+            <input type="number" name="cover_letter_rating" placeholder="Cover Letter Rating">
+            <input type="number" name="ref_letter_rating" placeholder="Ref Letter Rating">
+
+            <button type="submit">Add User</button>
+        </form>
+    </div>
+</body>
+</html>

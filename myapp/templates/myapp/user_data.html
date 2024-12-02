@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details - {{ employee.first_name }} {{ employee.last_name }}</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+            color: #ffffff;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            max-width: 700px;
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            margin-bottom: 20px;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #333;
+        }
+        th {
+            background-color: #333;
+            color: #ffffff;
+        }
+        tr:hover {
+            background-color: #222;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee Details for {{ employee.first_name }} {{ employee.last_name }}</h1>
+    
+    <table>
+        <tr>
+            <th>Attribute</th>
+            <th>Value</th>
+        </tr>
+        <tr><td>Employee ID</td><td>{{ employee.employee_id }}</td></tr>
+        <tr><td>First Name</td><td>{{ employee.first_name }}</td></tr>
+        <tr><td>Last Name</td><td>{{ employee.last_name }}</td></tr>
+        <tr><td>Email</td><td>{{ employee.email }}</td></tr>
+        <tr><td>Phone Number</td><td>{{ employee.phone_number }}</td></tr>
+        <tr><td>Hire Date</td><td>{{ employee.hire_date }}</td></tr>
+        <tr><td>Job Title</td><td>{{ employee.job_title }}</td></tr>
+        <tr><td>Department</td><td>{{ employee.department }}</td></tr>
+        <tr><td>Salary</td><td>{{ employee.salary }}</td></tr>
+        <tr><td>Manager ID</td><td>{{ employee.manager_id }}</td></tr>
+        <tr><td>Date of Birth</td><td>{{ employee.date_of_birth }}</td></tr>
+    </table>
+
+    <div class="back-link">
+        <a href="{% url 'employee_list' %}">Back to Employee List</a>
+    </div>
+</body>
+</html>

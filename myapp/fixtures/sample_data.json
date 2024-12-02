@@ -1,0 +1,40 @@
+[
+    {
+        "model": "myapp.user",
+        "pk": 1,
+        "fields": {
+            "name": "Alice Johnson",
+            "user_id": "U001",
+            "nationality": "USA",
+            "city": "New York",
+            "latitude": 40.7128,
+            "longitude": -74.0060,
+            "gender": "Female",
+            "ethnic_group": "Hispanic",
+            "math_grade": 88.5,
+            "language_grade": 92.0,
+            "portfolio_rating": 4.5,
+            "cover_letter_rating": 4.0,
+            "ref_letter_rating": 4.8
+        }
+    },
+    {
+        "model": "myapp.user",
+        "pk": 2,
+        "fields": {
+            "name": "Bob Smith",
+            "user_id": "U002",
+            "nationality": "Canada",
+            "city": "Toronto",
+            "latitude": 43.65107,
+            "longitude": -79.347015,
+            "gender": "Male",
+            "ethnic_group": "Caucasian",
+            "math_grade": 79.0,
+            "language_grade": 85.5,
+            "portfolio_rating": 3.8,
+            "cover_letter_rating": 4.1,
+            "ref_letter_rating": 4.2
+        }
+    }
+]

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #333;
+        }
+        th {
+            background-color: #333;
+            color: #ffffff;
+        }
+        tr:hover {
+            background-color: #222;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Attribute</th>
+            <th>Value</th>
+        </tr>
+
+
+<!--
+        <tr><td>Name</td><td>Kiana Lor</td></tr>
+        <tr><td>ID</td><td>0</td></tr>
+        <tr><td>Nationality</td><td>China</td></tr>
+        <tr><td>City</td><td>USA</td></tr>
+        <tr><td>Latitude</td><td>31.31</td></tr>
+        <tr><td>Longitude</td><td>120.62</td></tr>
+        <tr><td>Gender</td><td>F</td></tr>
+        <tr><td>Ethnic Group</td><td>NA</td></tr>
+        <tr><td>Age</td><td>22</td></tr>
+        <tr><td>English Grade</td><td>3.5</td></tr>
+        <tr><td>Math Grade</td><td>3.7</td></tr>
+        <tr><td>Science Grade</td><td>3.1</td></tr>
+        <tr><td>Language Grade</td><td>1</td></tr>
+        <tr><td>Portfolio Rating</td><td>4</td></tr>
+        <tr><td>Cover Letter Rating</td><td>4</td></tr>
+        <tr><td>Reference Letter Rating</td><td>4</td></tr>
+-->
+
+
+
+
+        <tr><td>Name</td><td>{{ user.name }}</td></tr>
+        <tr><td>ID</td><td>{{ user.user_id }}</td></tr>
+        <tr><td>Nationality</td><td>{{ user.nationality }}</td></tr>
+        <tr><td>City</td><td>{{ user.city }}</td></tr>
+        <tr><td>Latitude</td><td>{{ user.latitude }}</td></tr>
+        <tr><td>Longitude</td><td>{{ user.longitude }}</td></tr>
+        <tr><td>Gender</td><td>{{ user.gender }}</td></tr>
+        <tr><td>Ethnic Group</td><td>{{ user.ethnic_group }}</td></tr>
+        <tr><td>Math Grade</td><td>{{ user.math_grade }}</td></tr>
+        <tr><td>Language Grade</td><td>{{ user.language_grade }}</td></tr>
+        <tr><td>Portfolio Rating</td><td>{{ user.portfolio_rating }}</td></tr>
+        <tr><td>Cover Letter Rating</td><td>{{ user.cover_letter_rating }}</td></tr>
+        <tr><td>Reference Letter Rating</td><td>{{ user.ref_letter_rating }}</td></tr>
+        
+    </table>
+</body>
+</html>
