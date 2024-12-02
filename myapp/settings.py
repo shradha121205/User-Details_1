@@ -15,6 +15,8 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+PROJECT_DIR = os.path.abspath(os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))))
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myapp.settings')
 
@@ -60,10 +62,7 @@ ROOT_URLCONF = 'myapp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            BASE_DIR / 'templates',
-            r'C:\Users\shrad\OneDrive\Desktop\record\myapp\myapp\templates\myapp'
-            ],
+        'DIRS': [os.path.join(PROJECT_DIR,'templates/myapp')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
